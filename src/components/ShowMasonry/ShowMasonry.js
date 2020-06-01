@@ -22,7 +22,7 @@ const ShowMasonry = (props) => {
                 className="my-masonry-grid"
                 columnClassName="my-masonry-grid_column">
                 {props.gifs.map(gif => (
-                    <MasonryItem key={gif.id} image={gif.images.fixed_width.url}/>
+                    <MasonryItem key={gif.id} image={gif.images.fixed_width.url} link={gif.url}/>
                 ))}
             </Masonry>
         </div>

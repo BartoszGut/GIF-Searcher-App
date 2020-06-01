@@ -1,10 +1,10 @@
 import React from 'react'
 
-const MasonryItem = (props) => {
+const MasonryItem = ({url,image}) => {
     return (
-        <a href={props.url}>
+        <a href={url}>
             <div className="my-masonry_item">
-                <img src={props.image} alt="" />
+                <img src={image} alt="" />
             </div>
         </a>
     );
