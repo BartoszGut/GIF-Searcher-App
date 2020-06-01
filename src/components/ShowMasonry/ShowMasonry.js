@@ -1,6 +1,7 @@
 import React from 'react'
 import Masonry from 'react-masonry-css';
 import FetchError from '../shared/FetchError/FetchError';
+import MasonryItem from './MasonryItem/MasonryItem';
 
 const ShowMasonry = (props) => {
 
@@ -21,11 +22,7 @@ const ShowMasonry = (props) => {
                 className="my-masonry-grid"
                 columnClassName="my-masonry-grid_column">
                 {props.gifs.map(gif => (
-                    <a href={gif.url}>
-                        <div className="my-masonry_item">
-                            <img src={gif.images.fixed_width.url} alt="" />
-                        </div>
-                    </a>
+                    <MasonryItem key={gif.id} image={gif.images.fixed_width.url}/>
                 ))}
             </Masonry>
         </div>
