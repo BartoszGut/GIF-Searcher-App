@@ -1,0 +1,110 @@
+/* Variables */
+$blue: #057fdc;
+$light-blue: #37a6fb;
+
+body {
+  margin: 0;
+  background-color: #121212;
+  font-family: "open Sans";
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .form-container {
+      display: flex;
+      justify-content: center;
+
+      form {
+        flex-basis: 50%;
+
+        @media only screen and (max-width: 425px) {
+          flex-basis: 80%;
+        }
+
+        input {
+          width: 100%;
+          padding: 13px 10px;
+          font-size: 18px;
+          border-radius: 20px;
+          border: none;
+          outline: none;
+        }
+
+        .button-container {
+          display: flex;
+          justify-content: space-between;
+
+          margin-top: 25px;
+          margin-bottom: 50px;
+
+          button {
+            width: 45%;
+            padding: 15px 10px;
+            color: #fff;
+            font-weight: 800;
+            font-size: 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            border: none;
+            outline: none;
+            background: $blue;
+            transition: 0.8s;
+          }
+
+          button:hover {
+            background: $light-blue;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        max-width: 600px;
+      }
+    }
+
+    .my-masonry-grid {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-left: -30px;
+      width: auto;
+    }
+    .my-masonry-grid_column {
+      padding-left: 5px;
+      background-clip: padding-box;
+    }
+
+    .my-masonry-grid_column > div {
+      background: grey;
+      margin-bottom: 30px;
+    }
+
+    .my-masonry_item {
+      img {
+        width: 100%;
+      }
+    }
+
+    .async-status-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .error-message {
+        color: white;
+        font-size: 1.6em;
+      }
+    }
+  }
+}
